@@ -107,3 +107,12 @@ router.put('/products/:id', authenticateToken, async (req, res) => {
     res.status(500).json({ message: 'Error updating product' });
   }
 });
+
+router.get('/products', async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.json(products);
+  } catch {
+    res.status(500).json({ message: 'Error fetching products' });
+  }
+});
