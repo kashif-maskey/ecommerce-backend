@@ -5,11 +5,11 @@ const userSchema = new mongoose.Schema({
 });
 
 const productSchema = new mongoose.Schema({
-  name: { type: String, required: True },
-  price: { type: String, required: True},
-  description : { type: String},
-  image: {type : String},
-  stock: {type : String}
+  name: { type: String, required: true },
+  price: { type: String, required: true },
+  description: { type: String },
+  image: { type: String },
+  stock: { type: String }
 });
 
 const User = mongoose.model('user', userSchema)
